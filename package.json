@@ -1,0 +1,43 @@
+{
+  "name": "network-information",
+  "version": "1.0.0",
+  "description": "Provides information about the user's connection using The Network Information API. This can be used to select high definition content or low definition content.",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Baptiste Briel",
+    "email": "baptiste@sa-studio.fr",
+    "url": "https://github.com/baptistebriel"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.2.0",
+    "watchify": "^3.7.0"
+  },
+  "scripts": {
+    "bundle": "browserify index.js -s build/network-information -o build/network-information.js",
+    "build": "npm run bundle"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/baptistebriel/network-information.git"
+  },
+  "homepage": "https://github.com/baptistebriel/network-information",
+  "bugs": {
+    "url": "https://github.com/baptistebriel/network-information/issues"
+  }
+}
