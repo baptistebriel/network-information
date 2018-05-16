@@ -10,6 +10,7 @@ Provides information about the user's connection using [The Network Information 
 import Connection from 'network-information'
 
 const connect = new Connection()
+connect.init()
 console.log(connect.info)
 
 // { effectiveType: "4g", downlink: 10, saveData: false, rtt: 50 }
