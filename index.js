@@ -15,11 +15,13 @@ export default class Connection {
   }
 
   init() {
+    if (!navigator.connection) return
     navigator.connection.addEventListener('change', this.listener)
     this.listener()
   }
 
   listener() {
+    if (!navigator.connection) return
     const assign = Object.assign
     const connection = navigator.connection
     assign(this.data, {
@@ -31,6 +33,7 @@ export default class Connection {
   }
 
   destroy() {
+    if (!navigator.connection) return
     navigator.connection.removeEventListener('change', this.listener)
     this.data = null
   }

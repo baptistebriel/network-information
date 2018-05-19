@@ -1,6 +1,6 @@
 {
   "name": "network-information",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides information about the user's connection using The Network Information API. This can be used to select high definition content or low definition content.",
   "main": "index.js",
   "license": "MIT",

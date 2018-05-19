@@ -27,12 +27,14 @@ var Connection = function () {
   _createClass(Connection, [{
     key: 'init',
     value: function init() {
+      if (!navigator.connection) return;
       navigator.connection.addEventListener('change', this.listener);
       this.listener();
     }
   }, {
     key: 'listener',
     value: function listener() {
+      if (!navigator.connection) return;
       var assign = Object.assign;
       var connection = navigator.connection;
       assign(this.data, {
@@ -45,6 +47,7 @@ var Connection = function () {
   }, {
     key: 'destroy',
     value: function destroy() {
+      if (!navigator.connection) return;
       navigator.connection.removeEventListener('change', this.listener);
       this.data = null;
     }
